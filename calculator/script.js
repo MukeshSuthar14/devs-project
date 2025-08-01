@@ -52,7 +52,6 @@ function handleButtonClick(thisitem, key = null) {
                 display.value += key
         }
     } catch (error) {
-        console.error(error);
         display.value = invalidLabel
     }
 }
