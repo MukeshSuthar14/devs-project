@@ -28,8 +28,8 @@ function addToDoHtml(todo) {
             <div class="todo-col ${todo.completed ? "completed" : ""}">
                 <p class="index">${++actualIndex}</p>
                 <p class="todo-target">${todo.do}</p>
-                <button class="todo-complete-btn" type="button" data-id="${todo.id}" ${todo.completed ? "disabled" : ""} onclick="completeTodo(this)">Complete</button>
-                <button class="todo-delete-btn" type="button" data-id="${todo.id}" onclick="deleteTodo(this)">Delete</button>
+                <button class="todo-complete-btn" type="button" data-id="${todo.id}" ${todo.completed ? "disabled" : ""} onclick="completeTodo(this)" title="Completed">&#9989;</button>
+                <button class="todo-delete-btn" type="button" data-id="${todo.id}" onclick="deleteTodo(this)" title="Delete">&#x1F5D1;</button>
             </div>
         `)
     }
@@ -97,7 +97,7 @@ function completeTodo(thisitem) {
 function refreshScore() {
     const todoList = getTodo()
     const totalTodo = todoList.length
-    const completeTodo = todoList.reduce((carry, todo) => todo.completed ? carry + 1: carry, 0)
+    const completeTodo = todoList.reduce((carry, todo) => todo.completed ? carry + 1 : carry, 0)
     const pendingTodo = totalTodo - completeTodo
     changeScore('total-todo', totalTodo)
     changeScore('todo-complete', completeTodo)
@@ -105,6 +105,11 @@ function refreshScore() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('todo-field').addEventListener('keypress', function (event) {
+        if (event.keyCode === 13) {
+            add()
+        }
+    })
     const todoList = getTodo()
     if (todoList?.length) {
         todoList.forEach(todo => addToDoHtml(todo))

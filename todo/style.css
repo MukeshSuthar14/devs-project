@@ -10,16 +10,13 @@ body {
 }
 
 .container {
-    /* margin-top: 30px; */
+    margin-top: 30px;
     width: 900px;
-    /* background-color: #48435C; */
-    /* border-radius: 50px; */
-    /* height: 210px; */
+    border-radius: 50px;
 }
 
 .container .todo-div {
     color: #61E786;
-    padding-top: 20px;
     font-size: 50px;
     text-align: center;
 }
@@ -31,8 +28,12 @@ body {
 }
 
 .container .todo-form .todo-field {
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    
     #todo-field {
-        width: 700px;
+        width: 80%;
         height: 30px;
         padding: 10px;
         font-size: 20px;
@@ -40,6 +41,7 @@ body {
     }
 
     button {
+        width: 20%;
         height: 53px;
         padding: 10px;
         font-size: 20px;
@@ -47,14 +49,10 @@ body {
     }
 }
 
-.container .todo-list, .container .todo-start {
-    margin: 50px 0 50px 0;
+.container .todo-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #48435C;
-    border-radius: 50px;
-    padding: 20px 0 20px 0;
 
     .todo-col {
         width: 87%;
@@ -68,29 +66,40 @@ body {
         }
 
         .todo-target {
-            width: 60%;
+            width: 50%;
+            word-wrap: break-word;
             font-size: 25px;
             margin-left: 10px;
         }
 
         .todo-complete-btn {
             height: 50px;
-            width: 15%;
-            background-color: #69DDFF;
-            font-size: 20px;
+            width: 10%;
+            background-color: transparent;
+            /* background-color: #69DDFF; */
+            font-size: 35px;
             border: none;
             border-radius: 10px;
         }
 
         .todo-delete-btn {
+            color: white;
             height: 50px;
-            width: 15%;
-            background-color: #BE92A2;
-            font-size: 20px;
+            width: 10%;
+            background-color: transparent;
+            /* background-color: #BE92A2; */
+            font-size: 35px;
             border: none;
             border-radius: 10px;
         }
     }
+}
+
+.container .todo-list, .container .todo-start {
+    margin: 50px 0 50px 0;
+    background-color: #48435C;
+    border-radius: 50px;
+    padding: 20px 0 20px 0;
 }
 
 .completed {
@@ -107,4 +116,16 @@ body {
     gap: 30px;
     color: white;
     justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    .container .todo-div {
+        font-size: 40px;
+    }
+    .todo-score {
+        text-align: left;
+    }
+    .container .todo-list, .container .todo-start {
+        border-radius: 0;
+    }
 }
