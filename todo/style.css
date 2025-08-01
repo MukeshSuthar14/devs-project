@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+.container {
+    /* margin-top: 30px; */
+    width: 900px;
+    /* background-color: rgb(51, 118, 244); */
+    /* border-radius: 50px; */
+    /* height: 210px; */
+}
+
+.container .todo-div {
+    color: chartreuse;
+    padding-top: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container .todo-form {
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container .todo-form .todo-field {
+    #todo-field {
+        width: 700px;
+        height: 30px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+    button {
+        height: 53px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+}
+
+.container .todo-list, .container .todo-start {
+    margin: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(51, 118, 244);
+    border-radius: 50px;
+    padding: 20px 0 20px 0;
+
+    .todo-col {
+        width: 87%;
+        display: flex;
+        justify-content: space-between;
+        margin: 7px 0 7px 0;
+        color: white;
+
+        .index {
+            font-size: 25px;
+        }
+
+        .todo-target {
+            width: 60%;
+            font-size: 25px;
+            margin-left: 10px;
+        }
+
+        .todo-complete-btn {
+            height: 50px;
+            width: 15%;
+            background-color: lightblue;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .todo-delete-btn {
+            height: 50px;
+            width: 15%;
+            background-color: red;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}
+
+.completed {
+    text-decoration-line: line-through;
+}
+
+.todo-score > div {
+    display: flex;
+    gap: 5px;
+}
+
+.todo-score {
+    font-size: 30px;
+    gap: 30px;
+    color: white;
+    justify-content: space-between;
+}

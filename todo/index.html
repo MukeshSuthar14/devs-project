@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-start">
+            <div class="todo-div">
+                <div class="todo-heading">
+                    To-Do List
+                </div>
+            </div>
+            <div class="todo-form">
+                <div class="todo-field">
+                    <input type="text" name="todo" id="todo-field" autocomplete="off" placeholder="Enter todo...">
+                    <button type="button" onclick="add()">Add</button>
+                </div>
+            </div>
+        </div>
+        <div class="todo-list">
+
+        </div>
+        <div class="todo-list todo-score">
+            <div><p>Total Todo: </p><div class="total-todo"></div></div>
+            <div><p>Completed Todo: </p><div class="todo-complete"></div></div>
+            <div><p>Pending Todo: </p><div class="todo-pending"></div></div>
+        </div>
+    </div>
+    
+</body>
+</html>
