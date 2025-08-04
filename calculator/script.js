@@ -1,6 +1,7 @@
 const invalidLabel = "Invalid Operation";
 const allowedLetter = ["/", "*", "-", "+", "Enter", "c", "C", "AC", ".", "=", "Backspace"];
-const stack = [];
+let stack = [];
+const history = [];
 
 function checkValidChar(thisitem) {
     if (thisitem.value && thisitem.value.trim()) {
@@ -26,23 +27,27 @@ function handleButtonClick(thisitem, key = null) {
             case "c":
             case "C":
                 display.value = "0"
+                stack = []
             case "Backspace":
+                if (display.value.slice(-1) == ".") stack.pop()
                 display.value = display.value.slice(0, -1)
                 break;
             case "=":
             case "Enter":
-                display.value = display.value ? eval(display.value) : ""
+                let result = display.value ? eval(display.value) : ""
+                display.value = result
+                if (result.toString().includes(".")) stack = ["."]
+                history.push({ input: display.value, output: result, time: new Date().toLocaleDateString() })
                 break;
             default:
+                console.log(stack)
                 if (display.value === invalidLabel || display.value === "0") {
                     display.value = ""
                 }
-                if (key == "." && display.value.includes('.')) {
+                if (key == "." && stack.includes(".")) {
                     return false
                 }
-                if (key == ".") {
-                    stack.push(".")
-                }
+                if (key == ".") stack.push(".")
                 if (!display.value && display.value.startsWith("0")) {
                     display.value += "0"
                 }
@@ -52,6 +57,7 @@ function handleButtonClick(thisitem, key = null) {
                 display.value += key
         }
     } catch (error) {
+        console.error(error);
         display.value = invalidLabel
     }
 }

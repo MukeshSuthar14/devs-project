@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumintu | Insurance Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="public/Vector.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="public/Vector.png" alt="lumintu">
+                <span>lumintu</span>
+            </a>
+        </div>
+        <div class="navigation">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#page">Page</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="get-started">
+                <a href="#get-started">Get Started</a>
+            </div>
+            <div class="toggle-navbar">
+                <img src="public/menu-toggle.png" alt="menu-toggle" onclick="handleToggleMenu(this)">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div class="main-content">
+                <div class="sub-heading">
+                    <img src="public/lock.png" alt="Secure Your Future">
+                    <span> Secure Your Future</span>
+                </div>
+                <div class="heading">Insurance Solutions by Lumintu</div>
+                <div class="description">Consequat lacus eget congue hac aliquam facilisis purus massa vestibulum. Quam
+                    egestas et urna magna a phasellus et.</div>
+                <div class="help">
+                    <button type="button" class="get-quote">Get a Quote</button>
+                    <div class="phone">
+                        <img src="public/phone.png" alt="Call">
+                        <span>+123 456 7891</span>
+                    </div>
+                </div>
+                <div class="help-video">See how we can help you. <a href="#" class="help-link">Play Video</a></div>
+            </div>
+            <div class="aside-images">
+                <div class="about-images">
+                    <div class="person-image">
+                        <img src="public/person-image.png" alt="Person Image">
+                    </div>
+                    <div class="growth-rate-image">
+                        <img src="public/growth-rate-image.png" alt="Growth Rate Image">
+                    </div>
+                    <div class="review-image">
+                        <img src="public/review-image.png" alt="Review Image">
+                    </div>
+                </div>
+                <div class="side-image">
+                    <img src="public/Image.png" alt="Insurance Solutions by Lumintu">
+                </div>
+            </div>
+        </section>
+        <section id="fun-fact">
+            <div class="fact-container">
+                <div class="fact">
+                    <p class="data">34K +</p>
+                    <p>Success Stories</p>
+                </div>
+                <hr />
+                <div class="fact">
+                    <p class="data">210 +</p>
+                    <p>Professional Team</p>
+                </div>
+                <hr />
+                <div class="fact">
+                    <p class="data">54K +</p>
+                    <p>Branches Nationwide</p>
+                </div>
+                <hr />
+                <div class="fact">
+                    <p class="data">35K +</p>
+                    <p>Worldwide Clients</p>
+                </div>
+            </div>
+        </section>
+        <section id="about-us">
+            <div class="about-us-inner-div">
+                <div class="about-us-image">
+                    <img src="public/about-us-image.png" alt="About Us">
+                </div>
+                <div class="about-us">
+                    <div class="about-us-goal">
+                        <div class="heading">About Us</div>
+                        <div class="our-goal">Innovating Insurance Solutions</div>
+                    </div>
+                    <div class="vision-description">
+                        <h5 class="heading">Our Vision</h5>
+                        <div class="description">Aliquet nec mauris tortor at sed erat. Ut faucibus habitant
+                            risus
+                            morbi quis egestas etiam lorem. Feugiat lorem aliquam eget mattis cursus. Turpis massa arcu
+                            sagittis interdum. Integer molestie.</div>
+                    </div>
+                    <button type="button" class="learn-more-btn">Learn More</button>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="public/our-trusted-comapny-logo.png" alt="Our Trusted Companies">
+            </div>
+            <hr />
+        </section>
+        <!-- <section id="services">
+            <div class="services-heading">
+                <div>
+                    <div class="heading">Our Services</div>
+                    <div class="sub-heading">Our Range of Services</div>
+                </div>
+                <a href="#" class="all-services">See All Services</a>
+            </div>
+            <div class="services-table">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="public/services-logo.png" alt="Life Insurance">
+                    </div>
+                    <div class="service-info">
+                        <div class="service-name">
+                            Life Insurance
+                        </div>
+                        <div class="service-description">
+                            Aenean adipiscing amet dui cursus rhoncus nibh nec tortor fusce. Elementum dui tempor eget
+                            ac vitae hendrerit nisl. Erat id sit.
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="public/services-logo.png" alt="Health Insurance">
+                    </div>
+                    <div class="service-info">
+                        <div class="service-name">
+                            Health Insurance
+                        </div>
+                        <div class="service-description">
+                            Aenean adipiscing amet dui cursus rhoncus nibh nec tortor fusce. Elementum dui tempor eget
+                            ac vitae hendrerit nisl. Erat id sit.
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="public/services-logo.png" alt="Auto Insurance">
+                    </div>
+                    <div class="service-info">
+                        <div class="service-name">
+                            Auto Insurance
+                        </div>
+                        <div class="service-description">
+                            Aenean adipiscing amet dui cursus rhoncus nibh nec tortor fusce. Elementum dui tempor eget
+                            ac vitae hendrerit nisl. Erat id sit.
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="public/services-logo.png" alt="Home Insurance">
+                    </div>
+                    <div class="service-info">
+                        <div class="service-name">
+                            Home Insurance
+                        </div>
+                        <div class="service-description">
+                            Aenean adipiscing amet dui cursus rhoncus nibh nec tortor fusce. Elementum dui tempor eget
+                            ac vitae hendrerit nisl. Erat id sit.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page">
+
+        </section>
+        <section id="contact-us">
+
+        </section> -->
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
