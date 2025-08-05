@@ -1,6 +1,5 @@
 function handleToggleMenu(thisitem) {
     const navbar = document.getElementById('navbar');
-    console.log(thisitem.setAttribute)
     if (navbar) {
         if (navbar.classList.contains('open')) {
             navbar.classList.remove('open')
