@@ -10,3 +10,10 @@ function handleToggleMenu(thisitem) {
         }
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('contact-us-form').addEventListener('submit', event => {
+        event.preventDefault();
+        alert(`Thank You For Connecting Us. Here is you details: ${JSON.stringify(Object.fromEntries(new FormData(event.target).entries()))}`)
+        return false
+    })
+})

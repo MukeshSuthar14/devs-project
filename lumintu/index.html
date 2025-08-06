@@ -612,28 +612,109 @@
                 </div>
             </div>
             <div id="contact-us">
-                <div class="contact-us-form">
-                    <form method="GET" action="/">
+                <form method="GET" id="contact-us-form" action="/">
+                    <div class="contact-us-form">
                         <div class="form-field">
                             <label for="username">Your Name</label>
-                            <input type="text" name="username" placeholder="Enter Your Name" autocomplete="off">
+                            <input type="text" name="username" placeholder="Enter Your Name" autocomplete="off"
+                                required>
                         </div>
                         <div class="form-field">
                             <label for="email">Your Email</label>
-                            <input type="text" name="email" placeholder="Enter Your Email" autocomplete="off">
+                            <input type="text" name="email" placeholder="Enter Your Email" autocomplete="off" required>
                         </div>
                         <div class="form-field">
                             <label for="message">Your Message</label>
-                            <textarea name="message" placeholder="Enter Your Message" autocomplete="off" rows="4"></textarea>
+                            <textarea name="message" placeholder="Enter Your Message" autocomplete="off" rows="4"
+                                required></textarea>
                         </div>
-                    </form>
-                </div>
-                <button type="button" class="get-started">Send Message</button>
+                    </div>
+                    <button type="submit" class="get-started">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
     <footer>
-        
+        <div class="website-footer-info">
+            <div class="company-info">
+                <div class="logo">
+                    <a href="/">
+                        <img src="public/Vector.png" alt="lumintu">
+                        <span>lumintu</span>
+                    </a>
+                </div>
+                <div class="title">Empowering Your Peace of Mind</div>
+                <div class="description">Tellus tristique duis elementum nisl. Dui maecenas blandit cum a consectetur
+                    metus enim.</div>
+                <div class="phone">
+                    <img src="public/phone.png" alt="Call">
+                    <span>+123 456 7891</span>
+                </div>
+            </div>
+            <div class="company-links">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="company-help">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="company-links">
+                <nav>
+                    <ul>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="company-hours">
+                <div class="work-container">
+                    <div class="work">
+                        <div class="icon">
+
+                        </div>
+                        <div class="detail">
+                            9 AM - 5 PM, Monday - Saturday
+                        </div>
+                    </div>
+                    <div class="work">
+                        <div class="icon">
+
+                        </div>
+                        <div class="detail">
+                            support@kaliber.com
+                        </div>
+                    </div>
+                    <div class="work">
+                        <div class="icon">
+
+                        </div>
+                        <div class="detail">
+                            Jl. Menuju Roma No.01, Lewat Jalur Udara.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="copyright-container">
+            <div class="copyright">Copyright © 2023 Kaliber</div>
+            <div class="designed-by">Designed by Mukesh Suthar</div>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
