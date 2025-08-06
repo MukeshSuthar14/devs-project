@@ -15,7 +15,7 @@ html {
     --background: #F3F5FC;
     --text-color: #9F9F9F;
     --active-color: #3AA9E9;
-    --btn-bg-color: #050509
+    --btn-bg-color: #050509;
 }
 
 button {
@@ -862,7 +862,7 @@ header .logo span {
                     align-self: flex-start;
                     display: flex;
                     flex-direction: column;
-                    width: 70%;
+                    width: 100%;
                     gap: 20px;
 
                     & .contact-info {
@@ -927,10 +927,17 @@ header .logo span {
                     & label {
                         font-size: 20px;
 
-                        & input, textarea {
-                            border-radius: 5px;
-                            border: 1px solid #EAEEFF;
-                        }
+                    }
+
+                    & input, textarea {
+                        border-radius: 5px;
+                        padding: 20px;
+                        border: 1px solid #EAEEFF;
+                    }
+
+                    & input:active, input:focus, textarea:focus, textarea:active {
+                        outline: none;
+                        box-shadow: 0 0 6px 0 var(--active-color);
                     }
                 }
             }
@@ -938,6 +945,7 @@ header .logo span {
 
         & button {
             color: white;
+            margin: 0;
         }
     }
 }
@@ -1093,6 +1101,20 @@ header .logo span {
                     width: 100%;
                 }
             }
+        }
+    }
+
+    #get-started {
+        flex-direction: column;
+        gap: 50px;
+
+        & .get-started-contact {
+            width: 100%;
+        }
+
+        & #contact-us {
+            width: 100%;
+            padding: 54px 32px;
         }
     }
 }
