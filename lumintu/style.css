@@ -51,19 +51,13 @@ header .logo>a {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    text-decoration: none;
 
     img {
         margin-top: 10px;
+        height: 20px;
+        width: 20px;
     }
-}
-
-header .logo>a {
-    text-decoration: none;
-}
-
-header .logo img {
-    height: 20px;
-    width: 20px;
 }
 
 header .logo span {
@@ -963,6 +957,52 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    & .website-footer-info {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto 1fr;
+        /* grid-template-columns: 30% 15% 15% 15% 20%; */
+        column-gap: 81px;
+
+        & .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            & .logo {
+                display: flex;
+                align-items: center;
+
+                span {
+                    font-size: 36px;
+                    color: white;
+                    font-weight: bold;
+                }
+
+                & a {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    text-decoration: none;
+
+                    img {
+                        margin-top: 10px;
+                        height: 20px;
+                        width: 20px;    
+                    }
+                }
+            }
+        }
+    }
+
+    & hr {
+        border: 1px solid #EAEEFF;
+    }
+
+    & .copyright-container {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width:1384px) {
